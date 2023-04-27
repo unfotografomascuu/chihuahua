@@ -1,15 +1,18 @@
 const nav = document.getElementById("scroller");
 
-window.onmousemove = (e) => {
-    const percent = e.clientX / window.innerWidth;
+if (window.screen.width >= 1280 && window.screen.height >= 768) {
+    window.onmousemove = (e) => {
+        const percent = e.clientX / window.innerWidth;
 
-    nav.animate({
-        transform: `translate(${percent * nav.offsetWidth * -1}px, -0%)`,
-    }, {
-        fill: "both",
-        duration: 20000,
-    });
-};        
+        nav.animate({
+            transform: `translate(${percent * nav.offsetWidth * -1}px, -0%)`,
+        }, {
+            fill: "both",
+            duration: 20000,
+        });
+    };
+};
+
 
 const tl = gsap.timeline({ paused: true });
 

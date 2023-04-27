@@ -206,7 +206,7 @@ span::before {
     top: 60px;
     text-decoration: none;
     color: #fff;
-    font-size: 60px;
+    font-size: 4rem;
     font-family: Texto;
 }
 
@@ -216,7 +216,7 @@ span::before {
     top: 60px;
     left: 0;
     width: 500px;
-    height: 60px;
+    height: 5rem;
     background: #222;
     margin: 0 auto;
     transition: 1s;
@@ -237,6 +237,30 @@ span::before {
     color: #fff;
     font-size: 18px;
     font-family: Texto;
+}
+
+@media(max-width: 1280px) {
+    .nav{
+        flex-direction: column-reverse;
+    }
+    .nav-logo{
+        display: none;
+    }
+    .nav-footer{
+        display: none;
+    }
+    .contact-link{
+        padding: 1rem 0;
+    }
+    .contact-link a {
+        font-size: 3rem;
+    }
+    .social-links{
+        margin-top: 6rem;
+    }
+    .nav-socials a{
+        padding: 1rem 0; 
+    }
 }
 
 /*-----Scroller-----*/
@@ -378,9 +402,63 @@ span::before {
 
 .scroll-section:hover .img_wrapper img{
     opacity: 1;
-    transform: scale(1);
-    
+    transform: scale(1); 
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media(max-width: 1280px) {
+    .scroller {
+        left: 10%;
+        transform: translate(0%, 0%);
+    }
+    .scroll-section {
+        width: 80vw;
+        height: auto;
+    }
+    
+    .scroll-section:hover{
+        height: auto;
+        width: 80vw;
+    }
+    
+    .scroll-text-container {
+        width: 80vw;
+        height: 40vh;
+    }
+    
+    .scroll-text{
+        padding: 1em 2em;
+        width: 70vw;
+    }
+
+    .scroll-counter {
+        width: 100%;
+        height: 6vh;
+        text-align: center;
+        transition: all .2s ease-in-out;
+        padding: 1rem;
+    }
+    
+    .scroll-secondary-text {
+        width: 80vw;
+    }
+    
+    
+    .scroll-section:hover .scroll-secondary-text {
+        min-height: 15vh;
+        width: 80vw;
+    }
+    
+    .img_wrapper {
+        width: 80vw;
+        height: 70vh;
+    }
+    
+    .scroll-section:hover .img_wrapper {
+        height: 70vh;
+        width: 80vw;
+    }
+    
 }
 
 
