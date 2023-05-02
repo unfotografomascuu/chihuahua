@@ -11,6 +11,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7C3FLG7YF8"></script>
     <script>
@@ -29,7 +30,7 @@
             <h6 class="logo-text">Logo</h6>
             <div class="menu-toggle">
                 <div id="menu-toggle-btn">
-                    <span></span>
+                    <span class="menu-btn"></span>
                 </div>
             </div>
         </nav>
@@ -72,13 +73,19 @@
         </div>
 
         <div class="scroller-container">
+
+            <span id="left" class="material-symbols-outlined" onclick="prev()">
+                chevron_left
+            </span>
+
             <div id="scroller" class="scroller">
 
-                <div class="scroll-section">
+                <div class="scroll-section scroll-active">
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span I</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -94,7 +101,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span II</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -110,7 +118,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span III</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -126,7 +135,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span IV</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -142,7 +152,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span V</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -158,7 +169,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span VI</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -174,7 +186,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span VII</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -190,7 +203,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span VIII</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -206,7 +220,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span IX</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -222,7 +237,8 @@
                     <div class="scroll-text-container">
                         <h2 class="scroll-subtitle">Span X</h2>
                         <div class="scroll-secondary-text">
-                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet debitis
+                            <p class="scroll-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+                                debitis
                                 sed non
                                 consequuntur perspiciatis.</p>
                             <h2>btn</h2>
@@ -235,6 +251,9 @@
                 </div>
 
             </div>
+            <span id="right" class="material-symbols-outlined" onclick="next()">
+                chevron_right
+            </span>
         </div>
 
         <footer class="footer-container">

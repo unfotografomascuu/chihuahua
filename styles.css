@@ -51,6 +51,7 @@ body {
     src: url(Fonts/AndersonGrotesk-Light.otf);
     font-display: block;
 }
+
 h2{
     font-family: Texto;
     font-size: 1.6rem;
@@ -111,7 +112,7 @@ span {
     z-index: 10;
 }
 
-span {
+.menu-btn {
     height: 2px;
     width: 2rem;
     display: inline-block;
@@ -121,7 +122,7 @@ span {
     background: #222222;
 }
 
-span::before {
+.menu-btn::before {
     content: "";
     height: 2px;
     width: 2rem;
@@ -133,18 +134,18 @@ span::before {
     top: -2px;
 }
 
-.active span {
+.active .menu-btn {
     transform: rotate(45deg);
     background: #fff;
 }
 
-.active span::before {
+.active .menu-btn::before {
     top: unset;
     transform: rotate(-90deg);
     background: #fff;
 }
 
-.active:hover span::before {
+.active:hover .menu-btn::before {
     top: unset;
 }
 
@@ -264,6 +265,10 @@ span::before {
 }
 
 /*-----Scroller-----*/
+
+#left, #right{
+    display: none;
+}
 .scroller-container {
     width: 100vw;
     height: 88vh;
@@ -283,6 +288,16 @@ span::before {
 }
 
 .scroll-section {
+    width: 30vw;
+    height: auto;
+    overflow: hidden;
+    transition: all 250ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-section{
     width: 30vw;
     height: auto;
     overflow: hidden;
@@ -407,23 +422,54 @@ span::before {
 }
 
 @media(max-width: 1280px) {
-    .scroller {
-        left: 10%;
-        transform: translate(0%, 0%);
+
+    #left, #right{
+        display: block;
     }
+
+    .scroller-container {
+        width: 100vw;
+        height: 88vh;
+        display: grid;
+        grid-template-columns: 2em 1fr 2em;
+        align-items: center;
+    }
+
+    .scroller {
+        position: relative;
+        height: 85vh;
+        left: 0%;
+        transform: translate(0%, 0%);
+        align-items: center;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        grid-column: 2/3;
+    }
+
     .scroll-section {
         width: 80vw;
-        height: auto;
+        height: 100%;
+        display: none;
     }
-    
+
+    .scroll-active {
+        display: block;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr ;
+    }
+
     .scroll-section:hover{
-        height: auto;
-        width: 80vw;
+        width: 100%;
     }
-    
+
     .scroll-text-container {
-        width: 80vw;
+        width: 100%;
         height: 40vh;
+        grid-column: 1/2;
+        grid-row: 1/2;
+    
     }
     
     .scroll-text{
@@ -450,13 +496,15 @@ span::before {
     }
     
     .img_wrapper {
-        width: 80vw;
+        width: 100%;
         height: 70vh;
+        grid-column: 1/2;
+        grid-row: 1/2;    
     }
     
     .scroll-section:hover .img_wrapper {
         height: 70vh;
-        width: 80vw;
+        width: 100%;
     }
     
 }

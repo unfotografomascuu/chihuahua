@@ -13,6 +13,40 @@ if (window.screen.width >= 1280 && window.screen.height >= 768) {
     };
 };
 
+if (window.screen.width <= 1280 && window.screen.height >= 768) {
+    var section = document.querySelectorAll('.scroll-section');
+    let currentSection = 0;
+
+    function next() {
+        section[currentSection].classList.remove('scroll-active');
+        currentSection = (currentSection + 1) % section.length;
+        section[currentSection].classList.add('scroll-active');
+        console.log("Avanza");
+    };
+
+    function prev() {
+        section[currentSection].classList.remove('scroll-active');
+        currentSection = (currentSection - 1 + section.length) % section.length;
+        section[currentSection].classList.add('scroll-active');
+        console.log("Retrocede");
+    };
+
+    function auto() {
+
+        setInterval(function(){
+            section[currentSection].classList.remove('scroll-active');
+            currentSection = (currentSection + 1) % section.length;
+            section[currentSection].classList.add('scroll-active');
+            console.log("Auto");
+    
+            }, 5000);
+    };
+        
+   
+
+
+};
+
 
 const tl = gsap.timeline({ paused: true });
 
