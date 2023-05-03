@@ -52,12 +52,12 @@ body {
     font-display: block;
 }
 
-h2{
+h2 {
     font-family: Texto;
     font-size: 1.6rem;
 }
 
-h5{
+h5 {
     font-family: Titulo;
     font-size: 1.2rem;
 }
@@ -66,7 +66,8 @@ h6 {
     font-family: Titulo;
     font-size: 1.5rem;
 }
-p{
+
+p {
     font-family: Texto;
     font-size: 1rem;
 }
@@ -241,34 +242,42 @@ span {
 }
 
 @media(max-width: 1280px) {
-    .nav{
+    .nav {
         flex-direction: column-reverse;
     }
-    .nav-logo{
+
+    .nav-logo {
         display: none;
     }
-    .nav-footer{
+
+    .nav-footer {
         display: none;
     }
-    .contact-link{
+
+    .contact-link {
         padding: 1rem 0;
     }
+
     .contact-link a {
         font-size: 3rem;
     }
-    .social-links{
+
+    .social-links {
         margin-top: 6rem;
     }
-    .nav-socials a{
-        padding: 1rem 0; 
+
+    .nav-socials a {
+        padding: 1rem 0;
     }
 }
 
 /*-----Scroller-----*/
 
-#left, #right{
+#left,
+#right {
     display: none;
 }
+
 .scroller-container {
     width: 100vw;
     height: 88vh;
@@ -278,7 +287,7 @@ span {
 
 .scroller {
     position: fixed;
-    height: 85vh;    
+    height: 85vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -297,17 +306,7 @@ span {
     justify-content: center;
 }
 
-.scroll-section{
-    width: 30vw;
-    height: auto;
-    overflow: hidden;
-    transition: all 250ms;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.scroll-section:hover{
+.scroll-section:hover {
     height: 70vh;
     width: 30vw;
     transition: all .2s;
@@ -323,13 +322,13 @@ span {
     flex-direction: column;
 }
 
-.scroll-text{
+.scroll-text {
     padding: 1em 2em;
-    text-align: justify; 
+    text-align: justify;
     width: 20vw;
 }
 
-.scroll-subtitle{
+.scroll-subtitle {
     width: 100%;
     height: 6vh;
     text-align: center;
@@ -357,7 +356,7 @@ span {
     transition: all 250ms ease-in-out;
 }
 
-.scroll-section:hover .scroll-text-container{
+.scroll-section:hover .scroll-text-container {
     justify-content: space-evenly;
 }
 
@@ -365,7 +364,7 @@ span {
     opacity: 0;
     height: 0vh;
     width: 30vw;
-	transition: all 0ms ease-in-out;
+    transition: all 0ms ease-in-out;
 }
 
 
@@ -408,60 +407,68 @@ span {
     transform: scale(2.5);
 
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
-    
+
     pointer-events: none;
     height: 100%;
     width: 100%;
     object-fit: contain;
 }
 
-.scroll-section:hover .img_wrapper img{
+.scroll-section:hover .img_wrapper img {
     opacity: 1;
-    transform: scale(1); 
+    transform: scale(1);
     transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 @media(max-width: 1280px) {
+    .arrow-btn {
+        min-width: 5vw;
+        width: 100%;
+        text-align: center;
+    }
 
-    #left, #right{
+    #left,
+    #right {
         display: block;
+    }
+
+    #left{
+        display: none;
     }
 
     .scroller-container {
         width: 100vw;
         height: 88vh;
         display: grid;
-        grid-template-columns: 2em 1fr 2em;
+        grid-template-columns: 5vw 1fr 5vw;
         align-items: center;
     }
 
     .scroller {
         position: relative;
-        height: 85vh;
         left: 0%;
         transform: translate(0%, 0%);
-        align-items: center;
-        flex-wrap: nowrap;
-        align-content: center;
-        justify-content: center;
         grid-column: 2/3;
+        overflow: hidden;
+        scroll-behavior: smooth;
+        gap: 0;
+    }
+
+    .scroller.dragging {
+        scroll-behavior: auto;
     }
 
     .scroll-section {
-        width: 80vw;
-        height: 100%;
-        display: none;
-    }
-
-    .scroll-active {
-        display: block;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr ;
+        grid-template-rows: 1fr;
+        min-width: 80vw;
+        overflow: hidden;
     }
 
-    .scroll-section:hover{
+    .scroll-section:hover {
         width: 100%;
+        height: auto;
     }
 
     .scroll-text-container {
@@ -469,10 +476,10 @@ span {
         height: 40vh;
         grid-column: 1/2;
         grid-row: 1/2;
-    
+
     }
-    
-    .scroll-text{
+
+    .scroll-text {
         padding: 1em 2em;
         width: 70vw;
     }
@@ -484,31 +491,29 @@ span {
         transition: all .2s ease-in-out;
         padding: 1rem;
     }
-    
+
     .scroll-secondary-text {
         width: 80vw;
     }
-    
-    
+
     .scroll-section:hover .scroll-secondary-text {
         min-height: 15vh;
         width: 80vw;
     }
-    
+
     .img_wrapper {
         width: 100%;
         height: 70vh;
         grid-column: 1/2;
-        grid-row: 1/2;    
+        grid-row: 1/2;
     }
-    
+
     .scroll-section:hover .img_wrapper {
         height: 70vh;
         width: 100%;
     }
-    
-}
 
+}
 
 
 /*-----Footer-----*/
